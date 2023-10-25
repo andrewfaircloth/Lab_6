@@ -1,18 +1,20 @@
 # Name: Andrew Faircloth Collaborator: Pablo Sabogal
 def encode(password):
-    password = int(password)
-    pas_list = [*password]
     int_list = []
     final_string = ''
-    for i in pas_list:
-        int_list.append(i + 3)
+    for i in password:
+        num = int(i) + 3
+        if num > 9:
+            num -= 10
+        int_list.append(num)
+    print(int_list)
     for i in int_list:
         final_string += str(i)
     return final_string
 
 
 def decode(password):
-
+    pass
 
 def main():
     loop_go = True
